@@ -1,10 +1,15 @@
 import * as express from 'express';
-const app = express();
+import * as cors from 'cors'; // liberando acesso para o front!
+import * as bodyParser from 'body-parser'; // recebendo json e enviando
+import * as morgan from 'morgan';
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+// criando app
+export const app = express();
 
-app.listen(3000, () => {
-  console.log('Example app listening on port 3000!');
-});
+// liberando TODO acesso aos serviços.
+app.use(cors());
+
+// permite receber e enviar json.
+app.use(bodyParser.json());
+
+app.use(morgan(':method :url :status :response-time ms -'));
