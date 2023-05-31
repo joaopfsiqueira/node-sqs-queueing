@@ -7,7 +7,14 @@ const options = {
   socketTimeoutMS: 45000, // Close sockets after 45 seconds of inactivity
 };
 
-mongoose.connect(
-  `mongodb://${DB_USER}:${DB_PASS}@${DB_HOST}:${DB_PORT}/${DB_NAME}?authSource=admi`,
-  options
-);
+mongoose
+  .connect(
+    `mongodb://${DB_USER}:${DB_PASS}@${DB_HOST}:${DB_PORT}/${DB_NAME}?authSource=admi`,
+    options
+  )
+  .then(() => {
+    console.log('Connected to MongoDB');
+    (err) => {
+      console.log(err);
+    };
+  });
