@@ -10,15 +10,7 @@ const options = {
   socketTimeoutMS: 45000, // Close sockets after 45 seconds of inactivity
 };
 
-mongoose.connect(url, options, (err) => {
-  if (err) {
-    console.log(err);
-  }
-  console.log(
-    'Connected on MongoDB:',
-    `${mongoose.connection.host} (${mongoose.connection.name})`
-  );
-});
+mongoose.connect(url, options);
 
 mongoose.connection.on('connected', function () {
   console.log(
