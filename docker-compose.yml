@@ -28,4 +28,4 @@ services:
     tty: true # keep open the terminal
 
 volumes:
-  mongodb:
+  db:
