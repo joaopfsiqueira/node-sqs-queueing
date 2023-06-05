@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --exec ts-node --files src/server.ts",
-    "start": "ts-node --files --transpile-only src/server.ts"
+    "start": "ts-node --files --transpile-only src/server.ts",
+    "start2": "tsx src/server.ts",
+    "build": "tsup src"
   },
   "author": "João Siqueira",
   "license": "ISC",
@@ -23,6 +25,7 @@
     "dotenv": "^16.0.3",
     "nodemon": "^2.0.22",
     "ts-node": "^10.9.1",
+    "tsup": "^6.7.0",
     "tsx": "^3.12.7"
   }
 }
