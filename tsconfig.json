@@ -9,7 +9,7 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "./build",
-    "emitDecoratorMetadata": true,
+    "emitDecoratorMetadata": false,
     "experimentalDecorators": true,
     "sourceMap": true
   }
