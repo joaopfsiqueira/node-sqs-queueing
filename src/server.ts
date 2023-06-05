@@ -9,4 +9,4 @@ app.listen(process.env.NODE_DOCKER_PORT || 8080, () => {
     'Server is running on port',
     process.env.NODE_DOCKER_PORT || 8080
   );
-});
+})
