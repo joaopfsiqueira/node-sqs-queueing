@@ -8,7 +8,7 @@
     "target": "es2021",
     "module": "commonjs",
     "moduleResolution": "node",
-    "outDir": "./build",
+    "outDir": "./dist",
     "emitDecoratorMetadata": false,
     "experimentalDecorators": true,
     "sourceMap": true,
