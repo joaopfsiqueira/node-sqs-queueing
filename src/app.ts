@@ -7,15 +7,33 @@ import * as mongo from './config/db';
 
 dotenv.config();
 
-// criando app
-export const app = express();
+class App {
+  public express: express.Application;
 
-mongo.connectDb();
+  public constructor() {
+    this.express = express();
+  }
 
-// liberando TODO acesso aos serviços.
-app.use(cors());
+  private middlewares(): void {
+    // liberando TODO acesso aos serviços.
+    this.express.use(cors());
 
-// permite receber e enviar json.
-app.use(bodyParser.json());
+    // gerando logs de req
+    this.express.use(morgan(':method :url :status :response-time ms -'));
 
-app.use(morgan(':method :url :status :response-time ms -'));
+    // permite receber e enviar json.
+    this.express.use(bodyParser.json());
+  }
+
+  private database(): void {
+    mongo.connectDb();
+  }
+
+  private routes(): void {
+    this.express.get('/', (req, res) => {
+      res.send({ Message: 'Hello World!' });
+    });
+  }
+}
+
+export default new App().express;
