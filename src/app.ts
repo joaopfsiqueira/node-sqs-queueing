@@ -12,6 +12,9 @@ class App {
 
   public constructor() {
     this.express = express();
+    this.database();
+    this.middlewares();
+    this.routes();
   }
 
   private middlewares(): void {
