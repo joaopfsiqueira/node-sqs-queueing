@@ -21,9 +21,6 @@ services:
     env_file: ./.env
     ports:
       - $NODE_LOCAL_PORT:$NODE_DOCKER_PORT
-    environment:
-      - DB_HOST=mongodb
-      - DB_PORT=$MONGODB_DOCKER_PORT
     stdin_open: true # keep open the terminal
     tty: true # keep open the terminal
 
