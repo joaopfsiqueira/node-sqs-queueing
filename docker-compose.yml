@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.9'
 
 services:
   mongodb:
@@ -28,4 +28,4 @@ services:
     tty: true # keep open the terminal
 
 volumes:
-  db:
+  db: {}
