@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "nodemon src/server.ts",
     "start2": "ts-node --files --transpile-only src/server.ts",
-    "start": "tsx src/server.ts",
     "build": "tsup src"
   },
   "author": "João Siqueira",
@@ -29,9 +28,5 @@
     "tsup": "^6.7.0",
     "tsx": "^3.12.7",
     "typescript": "^5.1.3"
-  },
-  "lint-staged": {
-    "*.js": "eslint --cache --fix",
-    "*.--write": "prettier --write"
   }
 }
