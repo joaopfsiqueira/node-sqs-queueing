@@ -1,8 +1,8 @@
 import express from 'express';
 import cors from 'cors'; // liberando acesso para o front!
 import morgan from 'morgan';
-import * as bodyParser from 'body-parser'; // recebendo json e enviando
 import * as dotenv from 'dotenv'; // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+import * as bodyParser from 'body-parser'; // recebendo json e enviando
 import * as mongo from './config/db';
 
 dotenv.config();

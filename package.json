@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "dev": "nodemon src/server.ts",
     "start2": "ts-node --files --transpile-only src/server.ts",
