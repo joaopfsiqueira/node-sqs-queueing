@@ -1,6 +1,5 @@
 import * as mongoose from 'mongoose';
 
-const { MONGODB_URI } = process.env; //pegando de dentro do process.env
 const options = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -10,6 +9,7 @@ const options = {
 };
 
 export const connectDb = async () => {
+  const { MONGODB_URI } = process.env;
   mongoose.connect(MONGODB_URI, options);
 
   mongoose.connection.on('connected', function () {
