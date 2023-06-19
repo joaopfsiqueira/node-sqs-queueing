@@ -9,7 +9,11 @@ interface OrderInterface extends Document {
 }
 
 const OrderSchema = new Schema({
-  id_produto: Number,
+  id_produto: {
+    type: Number,
+    required: true,
+    index: true,
+  },
   nome_produto: String,
   preco_produto: Number,
   quantidade_produto: Number,
